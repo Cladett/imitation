@@ -240,6 +240,9 @@ def generate_trajectories(
       may be collected to avoid biasing process towards short episodes; the user
       should truncate if required.
     """
+
+    import pudb;pudb.set_trace()
+
     get_action = policy.predict
     if isinstance(policy, BaseAlgorithm):
         policy.set_env(venv)

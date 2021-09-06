@@ -9,13 +9,16 @@ from torch.utils import data as th_data
 from imitation.algorithms import bc
 from imitation.data import rollout, types
 from imitation.util import util
+import rlman
 
-ROLLOUT_PATH = "tests/data/expert_models/cartpole_0/rollouts/final.pkl"
+#ROLLOUT_PATH = "tests/data/expert_models/cartpole_0/rollouts/final.pkl"
+ROLLOUT_PATH = "tests/data/expert_models/rlman/rollouts/final.pkl"
 
 
 @pytest.fixture
 def venv():
-    env_name = "CartPole-v1"
+    #env_name = "CartPole-v1"
+    env_name = "dVRLPickPlaceTarget-v0"
     venv = util.make_vec_env(env_name, 2)
     return venv
 
